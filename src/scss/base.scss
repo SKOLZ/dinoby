@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Varela+Round|Poiret+One);
+
+* {
+  font-family: 'Poiret One', cursive;
+}
+
+p {
+  font-family: 'Varela Round', sans-serif;
+}
+
+.button {
+  height: 40px;
+  font-size: 24px;
+  padding: 0 30px;
+  line-height: 40px;
+  margin: 0;
+  text-transform: uppercase;
+  border-radius: 5px;
+  min-width: 210px;
+}
+
+.button--fill {
+  border: 1px solid $light-violet;
+  background: $light-violet;
+  color: $white;
+  letter-spacing: 5px;
+
+  &:hover {
+    background: darken($light-violet, 5%);
+    border-color: darken($light-violet, 5%);
+  }
+}
+
+.section {
+  height: 100vh;
+}
+
+.section--header {
+  background: $white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 5px solid $light-violet;
+
+  .brand-logo {
+    margin-bottom: 20px;
+  }
+
+  .headline {
+    font-size: 30px;
+    max-width: 500px;
+    line-height: 40px;
+    color: rgba($light-violet, 0.6);
+    margin-bottom: 10px;
+  }
+
+  .sub-headline {
+    width: 500px;
+    margin-bottom: 40px;
+    font-size: 25px;
+    line-height: 30px;
+    margin-top: 0;
+    color: rgba($light-violet, 0.4);
+  }
+
+  .preorder-button {
+    margin-bottom: 20px;
+  }
+
+  .app-image {
+    width: 100px;
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+.section--features {
+  background: $light-yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .headline {
+    text-align: center;
+    font-size: 60px;
+    margin: 30px 0;
+    color: $white;
+  }
+
+  .features-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    position: relative;
+  }
+}
+
+.feature-image {
+  margin-right: 80px;
+  opacity: 1;
+  transition: opacity 1s;
+  &.feature-img-hidden {
+    opacity: 0;
+    transition: opacity 1s;
+    position: absolute;
+    left: 0;
+  }
+}
+
+.feature-info {
+  max-width: 400px;
+  margin-top: 0;
+  opacity: 1;
+  transition: opacity 1.5s;
+
+  &.feature-info-hidden {
+    opacity: 0;
+    margin-top: -50px;
+    transition: margin-top 1s, opacity 0.5s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .feature-info-headline {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: $white;
+  }
+
+  .feature-info-p {
+    font-size: 20px;
+    color: $light-violet;
+  }
+}
+
+
+.section--reasons {
+  background: $light-violet;
+}
+
+.section--preorder {
+  background: $violet;
+}
+
+.footer {
+  height: 300px;
+  background: $white;
+}
