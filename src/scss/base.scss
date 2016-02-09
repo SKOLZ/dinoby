@@ -1,7 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round|Poiret+One);
 
 * {
-  font-family: 'Poiret One', cursive;
+  font-family: 'Poiret One', sans-serif;
+  outline: none;
 }
 
 p {
@@ -17,6 +18,14 @@ p {
   text-transform: uppercase;
   border-radius: 5px;
   min-width: 210px;
+}
+
+.headline {
+  text-align: center;
+  font-size: 70px;
+  margin-top: 60px;
+  margin-bottom: 0;
+  color: $white;
 }
 
 .button--fill {
@@ -46,15 +55,16 @@ p {
     margin-bottom: 20px;
   }
 
-  .headline {
+  .header-headline {
     font-size: 30px;
     max-width: 500px;
     line-height: 40px;
     color: rgba($light-violet, 0.6);
     margin-bottom: 10px;
+    margin-top: 0;
   }
 
-  .sub-headline {
+  .header-sub-headline {
     width: 500px;
     margin-bottom: 40px;
     font-size: 25px;
@@ -75,26 +85,31 @@ p {
   }
 }
 
-.section--features {
-  background: $light-yellow;
+.section--common {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
-  .headline {
-    text-align: center;
-    font-size: 60px;
-    margin: 30px 0;
-    color: $white;
-  }
+.section-content--common {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+  position: relative;
+}
 
-  .features-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    position: relative;
-  }
+.section-content--vertical {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.section--features {
+  background: $light-yellow;
 }
 
 .feature-image {
@@ -126,26 +141,158 @@ p {
 
   .feature-info-headline {
     font-size: 60px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: $white;
   }
 
   .feature-info-p {
     font-size: 20px;
     color: $light-violet;
+    border-top: 1px solid $white;
+    padding-top: 10px;
   }
 }
 
 
 .section--reasons {
   background: $light-violet;
+
+  .info-container {
+    max-width: 600px;
+    margin-right: 80px;
+
+    .reasons-info {
+      color: $super-light-violet;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 40px;
+    }
+
+    .simple-button {
+      border: 0;
+      background: transparent;
+      font-size: 20px;
+      color: $light-yellow;
+      font-family: 'Varela Round', sans-serif;
+      cursor: pointer;
+      &:hover {
+        color: darken($light-yellow, 10%);
+      }
+
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .videos-container {
+    position: relative;
+  }
+
+  .reasons-video {
+    opacity: 1;
+    transition: opacity 2s;
+    &.video-hidden {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: opacity 2s;
+      pointer-events: none;
+    }
+  }
 }
 
 .section--preorder {
   background: $violet;
 }
 
+.preorder-content {
+  height: calc(100% - 150px);
+}
+
+.preorder-info {
+  font-size: 24px;
+  color: $super-light-violet;
+  margin-bottom: 80px;
+  max-width: 700px;
+  text-align: center;
+}
+
+.preorder-form {
+  width: 100%;
+  text-align: center;
+  font-size: 0;
+}
+
+.preorder-input {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+
+  &::-webkit-input-placeholder {
+    color: $super-light-violet;
+  }
+
+  &:-moz-placeholder {
+    color: $super-light-violet;
+  }
+
+  &::-moz-placeholder {
+    color: $super-light-violet;
+  }
+
+  &:-ms-input-placeholder {
+    color: $super-light-violet;
+  }
+}
+
+.preorder-text {
+  background: transparent;
+  border: 1px solid $light-violet;
+  color: $light-violet;
+  width: calc(100% - 110px);
+  max-width: 450px;
+  margin-right: 10px;
+}
+
+.preorder-submit {
+  background: $light-violet;
+  color: $violet;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  padding: 0 20px 0 25px;
+  line-height: 50px;
+}
+
 .footer {
-  height: 300px;
+  height: 150px;
   background: $white;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid $light-violet;
+  border-radius: 100%;
+  line-height: 40px;
+  font-size: 20px;
+  margin-right: 10px;
+  color: $light-violet;
+  cursor: pointer;
+
+  &:hover {
+    background: $light-violet;
+    color: $white;
+  }
 }

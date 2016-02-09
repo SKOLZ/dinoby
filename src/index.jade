@@ -4,26 +4,27 @@ html(lang='en')
     title title here
     meta(charset="UTF-8")
     meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
     link(href='/css/vendor.css', rel='stylesheet')
     link(href='/css/application.css', rel='stylesheet')
   body
     #header.section.section--header
       .left-info-panel
-        img.brand-logo(src='http://placehold.it/500x100')
-        h2.headline
+        img.brand-logo(src='assets/logo2.png')
+        h2.header-headline
           | Challenge kids to empower themselves and become creators and innovators.
-        h3.sub-headline
+        h3.header-sub-headline
           | Dinoby is a innovative game that teaches kids how to code through an interactive experience.
         button.button.button--fill.preorder-button
           | preorder
         .apps-container
           img.app-image(src='assets/ios_app.png')
           img.app-image(src='assets/android_app.png')
-      img.header-image(src='http://placehold.it/500x600')
-    #features.section.section--features
+      img.header-image(src='assets/ipad.png')
+    #features.section.section--features.section--common
       h1.headline
         | Features
-      .features-container
+      .features-container.section-content--common
         .feature-images
           img#feature1-img.feature-image.feature-img-hidden(src='http://placehold.it/400x500/ff0000/ffffff')
           img#feature2-img.feature-image.feature-img-hidden(src='http://placehold.it/400x500/00ffff/ffffff')
@@ -52,9 +53,42 @@ html(lang='en')
               | Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita
                           
             
-    #reasons.section.section--reasons
-    #preorder.section.section--preorder
-      .preorder-content
+    #reasons.section.section--reasons.section--common
+      h1.headline
+        | Why is it important to learn to code?
+      .reasons-container.section-content--common
+        .info-container
+          p.reasons-info
+            | Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insecto. Estaba echado de espaldas sobre un duro caparazón y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo. Numerosas patas, penosamente delgadas en comparación con el grosor normal de sus piernas, se agitaban sin concierto. - ¿Qué me ha ocurrido? No estaba soñando. Su habitación, una habitación normal, aunque muy pequeña, tenía el aspecto habitual. Sobre la mesa había desparramado un muestrario
+          button.simple-button.js-video-selector(data-target='#mark')
+            i.fa.fa-youtube-play
+            | Mark Zuckerburg teaches Repeat Loops
+          button.simple-button.js-video-selector(data-target='#obama')
+            i.fa.fa-youtube-play
+            | President Obama asks America to learn computer science
+          button.simple-button.js-video-selector(data-target='#bill')
+            i.fa.fa-youtube-play
+            | Bill Gates explains If statements
+        .videos-container
+          iframe#mark.reasons-video(width="500" height="350" src="https://www.youtube.com/embed/mgooqyWMTxk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
+          iframe#obama.reasons-video.video-hidden(width="500" height="350" src="https://www.youtube.com/embed/6XvmhE1J9PY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
+          iframe#bill.reasons-video.video-hidden(width="500" height="350" src="https://www.youtube.com/embed/m2Ux2PnJe6E?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
+        
+    #preorder.section.section--preorder.section--common
+      h1.headline
+        | Preorder
+      .preorder-content.section-content--vertical
+        p.preorder-info
+          | Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza
+        form.preorder-form
+          input.preorder-input.preorder-text(type='email' placeholder='E-mail')
+          input.preorder-input.preorder-submit(type='submit' value='send')
       .footer
+        img.footer-logo(src='assets/logo_footer.png')
+        .social-container
+          a.social-icon
+            i.fa.fa-facebook
+          a.social-icon
+            i.fa.fa-linkedin
     // inject:js
     // endinject
