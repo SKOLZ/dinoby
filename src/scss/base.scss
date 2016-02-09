@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Varela+Round|Poiret+One);
+@import url('https://fonts.googleapis.com/css?family=Varela+Round|Poiret+One');
 
 * {
   font-family: 'Poiret One', sans-serif;
@@ -10,27 +10,81 @@ p {
 }
 
 .button {
-  height: 40px;
+  border-radius: 5px;
   font-size: 24px;
-  padding: 0 30px;
+  height: 40px;
   line-height: 40px;
   margin: 0;
-  text-transform: uppercase;
-  border-radius: 5px;
   min-width: 210px;
+  padding: 0 30px;
+  text-transform: uppercase;
 }
 
 .headline {
-  text-align: center;
-  font-size: 70px;
-  margin-top: 60px;
-  margin-bottom: 0;
   color: $white;
+  font-size: 70px;
+  margin-bottom: 0;
+  margin-top: 60px;
+  text-align: center;
+}
+
+.side-navigation {
+  height: 172px;
+  margin-left: 20px;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+
+  .side-link-container {
+    height: 24px;
+    margin: 20px auto;
+    position: relative;
+    text-align: center;
+  }
+
+  .side-link {
+    background: $super-light-violet;
+    border: 1px solid $violet;
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 16px;
+    margin: 4px 0;
+    transition: width 0.5s, height 0.5s, margin 0.5s;
+    width: 16px;
+
+    &.current-link {
+      height: 24px;
+      margin: 0;
+      transition: width 0.5s, height 0.5s, margin 0.5s;
+      width: 24px;
+    }
+  }
+
+  .side-tooltip {
+    background: $super-light-violet;
+    border-radius: 4px;
+    color: $violet;
+    font-size: 12px;
+    left: calc(100% + 10px);
+    opacity: 0;
+    padding: 2px 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity 1s;
+  }
+}
+
+.side-link:hover ~ .side-tooltip {
+  opacity: 1;
+  transition: opacity 1s;
 }
 
 .button--fill {
-  border: 1px solid $light-violet;
   background: $light-violet;
+  border: 1px solid $light-violet;
   color: $white;
   letter-spacing: 5px;
 
@@ -45,32 +99,32 @@ p {
 }
 
 .section--header {
+  align-items: center;
   background: $white;
+  border-top: 5px solid $light-violet;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  border-top: 5px solid $light-violet;
 
   .brand-logo {
     margin-bottom: 20px;
   }
 
   .header-headline {
-    font-size: 30px;
-    max-width: 500px;
-    line-height: 40px;
     color: rgba($light-violet, 0.6);
+    font-size: 30px;
+    line-height: 40px;
     margin-bottom: 10px;
     margin-top: 0;
+    max-width: 500px;
   }
 
   .header-sub-headline {
-    width: 500px;
-    margin-bottom: 40px;
+    color: rgba($light-violet, 0.4);
     font-size: 25px;
     line-height: 30px;
+    margin-bottom: 40px;
     margin-top: 0;
-    color: rgba($light-violet, 0.4);
+    width: 500px;
   }
 
   .preorder-button {
@@ -79,6 +133,7 @@ p {
 
   .app-image {
     width: 100px;
+
     &:not(:last-child) {
       margin-right: 10px;
     }
@@ -86,25 +141,25 @@ p {
 }
 
 .section--common {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .section-content--common {
-  display: flex;
   align-items: center;
+  display: flex;
   height: 100%;
   justify-content: space-around;
   position: relative;
 }
 
 .section-content--vertical {
-  display: flex;
   align-items: center;
+  display: flex;
+  flex-direction: column;
   height: 100%;
   justify-content: center;
-  flex-direction: column;
   position: relative;
 }
 
@@ -116,39 +171,40 @@ p {
   margin-right: 80px;
   opacity: 1;
   transition: opacity 1s;
+
   &.feature-img-hidden {
-    opacity: 0;
-    transition: opacity 1s;
-    position: absolute;
     left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s;
   }
 }
 
 .feature-info {
-  max-width: 400px;
   margin-top: 0;
+  max-width: 400px;
   opacity: 1;
   transition: opacity 1.5s;
 
   &.feature-info-hidden {
-    opacity: 0;
     margin-top: -50px;
-    transition: margin-top 1s, opacity 0.5s;
+    opacity: 0;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    transition: margin-top 1s, opacity 0.5s;
   }
 
   .feature-info-headline {
+    color: $white;
     font-size: 60px;
     margin-bottom: 10px;
-    color: $white;
   }
 
   .feature-info-p {
-    font-size: 20px;
-    color: $light-violet;
     border-top: 1px solid $white;
+    color: $light-violet;
+    font-size: 20px;
     padding-top: 10px;
   }
 }
@@ -158,23 +214,28 @@ p {
   background: $light-violet;
 
   .info-container {
-    max-width: 600px;
     margin-right: 80px;
+    max-width: 600px;
 
     .reasons-info {
       color: $super-light-violet;
       font-size: 18px;
       line-height: 28px;
-      margin-bottom: 40px;
+      margin-bottom: 20px;
+
+      &:last-of-type {
+        margin-bottom: 40px;
+      }
     }
 
     .simple-button {
-      border: 0;
       background: transparent;
-      font-size: 20px;
+      border: 0;
       color: $light-yellow;
-      font-family: 'Varela Round', sans-serif;
       cursor: pointer;
+      font-family: 'Varela Round', sans-serif;
+      font-size: 20px;
+
       &:hover {
         color: darken($light-yellow, 10%);
       }
@@ -192,12 +253,13 @@ p {
   .reasons-video {
     opacity: 1;
     transition: opacity 2s;
+
     &.video-hidden {
       opacity: 0;
+      pointer-events: none;
       position: absolute;
       top: 0;
       transition: opacity 2s;
-      pointer-events: none;
     }
   }
 }
@@ -211,26 +273,26 @@ p {
 }
 
 .preorder-info {
-  font-size: 24px;
   color: $super-light-violet;
+  font-size: 24px;
   margin-bottom: 80px;
   max-width: 700px;
   text-align: center;
 }
 
 .preorder-form {
-  width: 100%;
-  text-align: center;
   font-size: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .preorder-input {
-  display: inline-block;
-  vertical-align: middle;
   border-radius: 5px;
+  display: inline-block;
+  font-size: 16px;
   height: 50px;
   text-align: center;
-  font-size: 16px;
+  vertical-align: middle;
 
   &::-webkit-input-placeholder {
     color: $super-light-violet;
@@ -253,43 +315,68 @@ p {
   background: transparent;
   border: 1px solid $light-violet;
   color: $light-violet;
-  width: calc(100% - 110px);
-  max-width: 450px;
   margin-right: 10px;
+  max-width: 450px;
+  width: calc(100% - 110px);
 }
 
 .preorder-submit {
   background: $light-violet;
-  color: $violet;
   border: 0;
-  text-transform: uppercase;
+  color: $violet;
   letter-spacing: 5px;
-  padding: 0 20px 0 25px;
   line-height: 50px;
+  padding: 0 20px 0 25px;
+  text-transform: uppercase;
 }
 
 .footer {
-  height: 150px;
+  align-items: center;
   background: $white;
   display: flex;
-  align-items: flex-end;
+  height: 150px;
   justify-content: space-between;
   padding: 20px;
   width: 100%;
 }
 
+.footer-info {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.contact-headline {
+  color: $violet;
+  font-size: 26px;
+  line-height: 26px;
+  margin: 0 0 10px;
+}
+
+.contact-sub-headline {
+  color: $light-violet;
+  font-size: 22px;
+  margin: 0;
+
+  .contact-email {
+    color: $violet;
+  }
+}
+
 .social-icon {
-  width: 40px;
-  height: 40px;
-  display: inline-block;
-  text-align: center;
   border: 1px solid $light-violet;
   border-radius: 100%;
-  line-height: 40px;
-  font-size: 20px;
-  margin-right: 10px;
   color: $light-violet;
   cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 10px;
+  text-align: center;
+  width: 40px;
 
   &:hover {
     background: $light-violet;

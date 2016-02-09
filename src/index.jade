@@ -1,13 +1,30 @@
 doctype html
 html(lang='en')
   head
-    title title here
+    title Dinoby
     meta(charset="UTF-8")
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
     link(href='/css/vendor.css', rel='stylesheet')
     link(href='/css/application.css', rel='stylesheet')
   body
+    .side-navigation
+      .side-link-container
+        a.side-link(href="#header")
+        span.side-tooltip
+          | Home
+      .side-link-container
+        a.side-link(href="#features")
+        span.side-tooltip
+          | Features
+      .side-link-container
+        a.side-link(href="#reasons")
+        span.side-tooltip
+          | Why
+      .side-link-container
+        a.side-link(href="#preorder")
+        span.side-tooltip
+          | Preorder
     #header.section.section--header
       .left-info-panel
         img.brand-logo(src='assets/logo2.png')
@@ -15,15 +32,15 @@ html(lang='en')
           | Challenge kids to empower themselves and become creators and innovators.
         h3.header-sub-headline
           | Dinoby is a innovative game that teaches kids how to code through an interactive experience.
-        button.button.button--fill.preorder-button
-          | preorder
+        button.button.button--fill.preorder-button.js-preorder-button
+          | pre-order
         .apps-container
           img.app-image(src='assets/ios_app.png')
           img.app-image(src='assets/android_app.png')
       img.header-image(src='assets/ipad.png')
     #features.section.section--features.section--common
       h1.headline
-        | Features
+        | How it works
       .features-container.section-content--common
         .feature-images
           img#feature1-img.feature-image.feature-img-hidden(src='http://placehold.it/400x500/ff0000/ffffff')
@@ -33,33 +50,35 @@ html(lang='en')
         .feature-info-container
           #feature1-info.feature-info.feature-info-hidden
             h1.feature-info-headline
-              | Feature 1
+              | 01
             p.feature-info-p
-              | Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita
+              | Learn the basics of coding by helping Dino on the first mission
           #feature2-info.feature-info.feature-info-hidden
             h1.feature-info-headline
-              | Feature 2
+              | 02
             p.feature-info-p
-              | Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita
+              | Place the tokens in the playground to build Dino's virtual world
           #feature3-info.feature-info.feature-info-hidden
             h1.feature-info-headline
-              | Feature 3
+              | 03
             p.feature-info-p
-              | Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita
+              | Use your programming skills and help Dino to reach the goal
           #feature4-info.feature-info.feature-info-hidden
             h1.feature-info-headline
-              | Feature 4
+              | 04
             p.feature-info-p
-              | Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita Blabla sist amet holis asdasd lorem ipsum muito giladita
+              | Run your code and bring Dino to life with Augmented Reality
                           
             
     #reasons.section.section--reasons.section--common
       h1.headline
-        | Why is it important to learn to code?
+        | Why teach your kids to code?
       .reasons-container.section-content--common
         .info-container
           p.reasons-info
-            | Una mañana, tras un sueño intranquilo, Gregorio Samsa se despertó convertido en un monstruoso insecto. Estaba echado de espaldas sobre un duro caparazón y, al alzar la cabeza, vio su vientre convexo y oscuro, surcado por curvadas callosidades, sobre el que casi no se aguantaba la colcha, que estaba a punto de escurrirse hasta el suelo. Numerosas patas, penosamente delgadas en comparación con el grosor normal de sus piernas, se agitaban sin concierto. - ¿Qué me ha ocurrido? No estaba soñando. Su habitación, una habitación normal, aunque muy pequeña, tenía el aspecto habitual. Sobre la mesa había desparramado un muestrario
+            | We want to help you give your kids the tools to shape the world. Playing with Dinoby, they learn the basics of coding while having fun. Give your kids the opportunity to discover empowering software skills to make their ideas happen.
+          p.reasons-info
+            | Do you still have any doubts? Just listen to the experts:
           button.simple-button.js-video-selector(data-target='#mark')
             i.fa.fa-youtube-play
             | Mark Zuckerburg teaches Repeat Loops
@@ -76,19 +95,27 @@ html(lang='en')
         
     #preorder.section.section--preorder.section--common
       h1.headline
-        | Preorder
+        | PRE-ORDER
       .preorder-content.section-content--vertical
         p.preorder-info
-          | Y, viéndole don Quijote de aquella manera, con muestras de tanta tristeza
+          | Leave your email and get Dinoby first!
         form.preorder-form
           input.preorder-input.preorder-text(type='email' placeholder='E-mail')
           input.preorder-input.preorder-submit(type='submit' value='send')
       .footer
-        img.footer-logo(src='assets/logo_footer.png')
-        .social-container
-          a.social-icon
-            i.fa.fa-facebook
-          a.social-icon
-            i.fa.fa-linkedin
+        .contact-info
+          h1.contact-headline
+            | We'd love to hear from you!
+          h2.contact-sub-headline
+            | For more information contact us at 
+            span.contact-email
+              | info@dinoby.io
+        .footer-info  
+          .social-container
+            a.social-icon
+              i.fa.fa-facebook
+            a.social-icon
+              i.fa.fa-linkedin
+          img.footer-logo(src='assets/logo_footer.png')
     // inject:js
     // endinject

@@ -7,6 +7,31 @@
     $("#preorder")
   ]
 
+  const FEATURES_SECTION = 1;
+  const PREORDER_SECTION = 3;
+  const MIN_SCROLL_CALLS = 10;
+
+  var currentSection = 0;
+  var currentFeature = 0;
+
+  var upScrollCalls = 0;
+  var downScrollCalls = 0;
+
+  var scrollingDirection = "none";
+  var isAutoScrolling = false;
+
+  $(document).ready(function () {
+    initializeFeaturesSection()
+    var found;
+    sections.forEach(function (element, index) {
+      if (window.pageYOffset <= element.offset().top && !found) {
+        found = true;
+        currentSection = window.pageYOffset == element.offset().top ? index : index - 1;
+        updateSideLink();
+      }
+    });
+  });
+
   var featuresContainer = $('.features-container');
 
   var features = [
@@ -25,17 +50,10 @@
     }
   ]
 
-  var currentFeature = 0;
-
-  const MIN_SCROLL_CALLS = 10;
-  const FEATURES_SECTION = 1;
-
-  var upScrollCalls = 0;
-  var downScrollCalls = 0;
-
-  var scrollingDirection = "none";
-  var currentSection = 0;
-  var isAutoScrolling = false;
+  function updateSideLink () {
+    $(".side-link").removeClass('current-link');
+    $($('.side-link')[currentSection]).addClass('current-link');
+  }
 
   function handleFeaturesSection () {
     if ((scrollingDirection == "up" && currentFeature == 0) || (scrollingDirection == "down" && currentFeature == features.length - 1)) {
@@ -48,6 +66,7 @@
   }
 
   function initializeFeaturesSection () {
+    disappearFeature(features[currentFeature]);
     if (scrollingDirection == "up") {
       currentFeature = features.length - 1;
     } else if (scrollingDirection == "down") {
@@ -80,6 +99,7 @@
           }
           if (sectionChanged) {
             currentSection--;
+            updateSideLink();
             if (currentSection === FEATURES_SECTION) {
               initializeFeaturesSection();
             }
@@ -116,6 +136,7 @@
           }
           if (sectionChanged) {
             currentSection++;
+            updateSideLink();
             if (currentSection === FEATURES_SECTION) {
               initializeFeaturesSection();
             }
@@ -157,4 +178,24 @@
     $(target).removeClass('video-hidden');
   });
 
+  $('.js-preorder-button').click(function () {
+    currentSection = PREORDER_SECTION;
+    updateSideLink();
+    $('html, body').animate({
+      scrollTop: sections[currentSection].offset().top
+    }, 1000);
+  });
+
+  $(".side-link").click(function(e) {
+    var destination = $(this).attr('href');
+    var sectionIds = sections.map(function (obj) {
+      return "#" + obj.attr('id');
+    })
+    currentSection = sectionIds.indexOf(destination);
+    updateSideLink();
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(destination).offset().top
+    }, 1000);
+  });
 })();
