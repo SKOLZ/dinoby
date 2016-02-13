@@ -27,7 +27,6 @@
       if (window.pageYOffset <= element.offset().top && !found) {
         found = true;
         currentSection = window.pageYOffset == element.offset().top ? index : index - 1;
-        updateSideLink();
       }
     });
   });
@@ -49,11 +48,6 @@
       img: featuresContainer.find('#feature4-img')
     }
   ]
-
-  function updateSideLink () {
-    $(".side-link").removeClass('current-link');
-    $($('.side-link')[currentSection]).addClass('current-link');
-  }
 
   function handleFeaturesSection () {
     if ((scrollingDirection == "up" && currentFeature == 0) || (scrollingDirection == "down" && currentFeature == features.length - 1)) {
@@ -99,7 +93,6 @@
           }
           if (sectionChanged) {
             currentSection--;
-            updateSideLink();
             if (currentSection === FEATURES_SECTION) {
               initializeFeaturesSection();
             }
@@ -136,7 +129,6 @@
           }
           if (sectionChanged) {
             currentSection++;
-            updateSideLink();
             if (currentSection === FEATURES_SECTION) {
               initializeFeaturesSection();
             }
@@ -180,19 +172,17 @@
 
   $('.js-preorder-button').click(function () {
     currentSection = PREORDER_SECTION;
-    updateSideLink();
     $('html, body').animate({
       scrollTop: sections[currentSection].offset().top
     }, 1000);
   });
 
-  $(".side-link").click(function(e) {
+  $(".nav-link").click(function(e) {
     var destination = $(this).attr('href');
     var sectionIds = sections.map(function (obj) {
       return "#" + obj.attr('id');
     })
     currentSection = sectionIds.indexOf(destination);
-    updateSideLink();
     e.preventDefault();
     $('html, body').animate({
       scrollTop: $(destination).offset().top
