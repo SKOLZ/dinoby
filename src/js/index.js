@@ -82,7 +82,6 @@
   $('body').on("mousewheel", function (e) {
     if (!isAutoScrolling) {
       if(e.originalEvent.wheelDelta / 120 > 0) {
-        console.log('UP');
         downScrollCalls = 0;
         upScrollCalls++;
         if (upScrollCalls > MIN_SCROLL_CALLS && scrollingDirection !== "up" && currentSection - 1 >= 0) {
@@ -101,11 +100,10 @@
               scrollTop: sections[currentSection].offset().top
             }, 1000, function () {
               setTimeout(function () {
-                console.log('STAHP');
                 upScrollCalls = 0;
                 isAutoScrolling = false;
                 scrollingDirection = "none";
-              }, 1000)
+              }, 2000)
             });
           } else {
             setTimeout(function () {
@@ -116,11 +114,10 @@
               }
               scrollingDirection = "none";
               isAutoScrolling = false;
-            }, 1000)
+            }, 2000)
           }
         }
       } else {
-        console.log('DOWN');
         upScrollCalls = 0;
         downScrollCalls++;
         if (downScrollCalls > MIN_SCROLL_CALLS &&  scrollingDirection !== "down" && currentSection + 1 < sections.length) {
@@ -142,7 +139,7 @@
                 downScrollCalls = 0;
                 isAutoScrolling = false;
                 scrollingDirection = "none";
-              }, 1000)
+              }, 2000)
             });
           } else {
             setTimeout(function () {
@@ -153,7 +150,7 @@
               }
               scrollingDirection = "none";
               isAutoScrolling = false;
-            }, 1000)
+            }, 2000)
           }
         }
       }

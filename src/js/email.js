@@ -24,6 +24,7 @@ $(document).ready(function () {
   }
 
   $('form.preorder-form').submit(function(event) {
+    event.preventDefault();
     var email = $('form.preorder-form input.preorder-input.preorder-text').val();
     var spinner = new Spinner(opts).spin();
     $('form.preorder-form').append(spinner.el);
@@ -47,6 +48,5 @@ $(document).ready(function () {
         $('.preorder-error').show()
       }
     });
-    event.preventDefault();
   })
 });
