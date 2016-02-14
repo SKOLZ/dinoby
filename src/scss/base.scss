@@ -1,23 +1,7 @@
-@font-face {
-    font-family: 'Gotham';
-    font-weight: 300;
-    src: url("../fonts/GOTHAM-LIGHT.TTF");
-}
-
-@font-face {
-    font-family: 'Gotham';
-    font-weight: 400;
-    src: url("../fonts/GOTHAM-MEDIUM.TTF");
-}
-
-@font-face {
-    font-family: 'Gotham';
-    font-weight: bold;
-    src: url("../fonts/GOTHAM-ULTRA.TTF");
-}
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,300);
 
 * {
-  font-family: 'Gotham', Tahoma;
+  font-family: 'Source Sans Pro', sans-serif;
   outline: none;
 }
 
@@ -84,6 +68,12 @@ body {
   margin-top: 120px;
   text-align: center;
   font-weight: bold;
+}
+
+.section--top-decoration {
+  background-image: url("../assets/pattern.png");
+  background-repeat: repeat-x;
+  background-position-y: -100px;
 }
 
 // .side-navigation {
@@ -156,10 +146,19 @@ body {
 }
 
 .section--header {
-  align-items: center;
-  background: $light-blue;
-  display: flex;
-  justify-content: space-around;
+  background-color: $light-blue;
+
+  .left-info-panel {
+    position: absolute;
+    bottom: 250px;
+    left: 660px;
+  }
+
+  .header-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 
   .brand-logo {
     margin-bottom: 20px;
@@ -218,7 +217,7 @@ body {
 }
 
 .section--features {
-  background: $white;
+  background-color: $white;
 }
 
 .feature-image {
@@ -323,7 +322,7 @@ body {
 }
 
 .section--preorder {
-  background: $white;
+  background-color: $white;
 }
 
 .preorder-content {
@@ -442,4 +441,24 @@ body {
     border: 1px solid $violet;
     background: transparent;
   }
+}
+
+@media(max-width: 1255px) {
+  .section--header {
+    align-items: center;
+    background-color: $light-blue;
+    display: flex;
+    justify-content: space-around;
+
+    .left-info-panel {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+
+    .header-image {
+      display: none;
+    }
+  }
+
 }
