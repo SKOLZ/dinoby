@@ -340,6 +340,22 @@ body {
   font-weight: bold;
 }
 
+.preorder-success {
+  color: $light-violet;
+}
+
+.preorder-error {
+  color: $red;
+}
+
+.preorder-success, .preorder-error {
+  font-size: 15px;
+  max-width: 700px;
+  text-align: center;
+  font-weight: bold;
+  display: none;
+}
+
 .preorder-form {
   font-size: 0;
   text-align: center;

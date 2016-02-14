@@ -1,0 +1,25 @@
+<mj-body>
+  <mj-section>
+    <mj-column>
+
+      <mj-divider border-color="#9571AE"></mj-divider>
+
+      <mj-text font-size="25px" color="#9571AE" font-family="helvetica" align="center">
+      Thanks for your interest in Dinoby!
+      </mj-text>
+
+      <mj-image width="100%" max-width="100%" src="https://s3.amazonaws.com/dinoby.io/assets/logo_header.png"></mj-image>
+
+      <mj-text font-size="15px" color="#9571AE" font-family="helvetica" align="justify">
+      We want to help you give your kids the tools to shape the world. Playing with Dinoby, they learn the basics of coding while having fun. Give your kids the opportunity to discover empowering software skills to make their ideas happen.
+      </mj-text>
+
+      <mj-text font-size="15px" color="#9571AE" font-family="helvetica" align="justify">
+      We'll keep you posted with every update!
+      </mj-text>
+
+      <mj-divider border-color="#9571AE"></mj-divider>
+
+    </mj-column>
+  </mj-section>
+</mj-body>

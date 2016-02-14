@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/Wolox/frontend-bootstrap",
   "dependencies": {
-    "auth0-js": "^6.8.0"
   },
   "devDependencies": {
     "babel-core": "^6.4.5",
