@@ -322,6 +322,63 @@ body {
   }
 }
 
+.section--demo {
+  background: $light-violet;
+
+  .demo-container{
+    margin-top: 145px;
+
+    .headline {
+      color: $white;
+      margin-top: 0px;
+    }
+
+    .info-container {
+      max-width: 600px;
+
+      .data-row:first-child {
+        margin-bottom: 20px;
+      }
+
+      .data-row {
+        width: 100%;
+        font-size: 0;
+        min-width: 360px;
+        display: block;
+
+        .number, .content {
+          height: 100%;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 0;
+        }
+
+        .number {
+          width: 15%;
+          span {
+            font-size: 60px;
+            color: white;
+          }
+        }
+
+        .content {
+          min-width: 360px;
+          width: 85%;
+          font-size: 20px;
+          color: white;
+          text-align: center;
+          .apps-container {
+            margin-top: 10px;
+            .app-image:not(:last-child) {
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .section--preorder {
   background: $white;
 }

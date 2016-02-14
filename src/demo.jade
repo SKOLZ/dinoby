@@ -1,0 +1,71 @@
+doctype html
+html(lang='en')
+  head
+    title Dinoby
+    meta(charset="UTF-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    link(href='/css/vendor.css', rel='stylesheet')
+    link(href='/css/application.css', rel='stylesheet')
+  body
+    nav.navbar.navbar-fixed-top(role="navigation")
+      .navbar-header
+        a.nav-link(href="/")
+          img.navbar-img(src='assets/logo_header.png')
+        button.navbar-toggle(data-target=".navbar-collapse" data-toggle="collapse" type="button")
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+      .collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li
+            a.nav-link(href="/")
+              | Home
+          li
+            a.special(href="index.html#preorder" target="_blank")
+              | PRE-ORDER
+
+    #demo.section.section--demo.section--common
+      .demo-container.section-content--common
+        .info-container
+          .data-row
+            h1.headline
+              | Follow these steps to get started
+          .data-row
+            .number
+              span
+                | 1
+            .content
+              span
+                | Download the apps
+              .apps-container
+                img.app-image(src='assets/appstore_badge.png')
+                img.app-image(src='assets/googleplay_badge.png')
+          .data-row
+            .number
+              span
+                | 2
+            .content
+              span
+                | Download this image
+          .data-row
+            .number
+              span
+                | 3
+            .content
+              span
+                | Open the app, follow the instructions and enjoy!
+      .footer
+        .contact-info
+          h1.contact-headline
+            | We'd love to hear from you!
+          h2.contact-sub-headline
+            | For more information contact us at info@dinoby.io
+        .footer-info
+          .social-container
+            a.social-icon
+              i.fa.fa-facebook
+            a.social-icon
+              i.fa.fa-linkedin-square
+          img.footer-logo(src='assets/logo_footer.png')
