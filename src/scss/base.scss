@@ -7,7 +7,7 @@
 
 body {
   height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .navbar {
@@ -222,50 +222,58 @@ body {
 
 .section--features {
   background-color: $white;
-}
+  .features-container {
+    height: 100vh;
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+    .feature-images {
+      display: inline-block;
+      .feature-image {
+        opacity: 1;
+        transition: opacity 1s;
 
-.feature-image {
-  margin-right: 80px;
-  opacity: 1;
-  transition: opacity 1s;
+        &.feature-img-hidden {
+          left: 0;
+          opacity: 0;
+          position: absolute;
+          transition: opacity 1s;
+        }
+      }
+    }
+    .feature-info-container {
+      display: inline-block;
+      .feature-info {
+        margin-top: 0;
+        max-width: 400px;
+        opacity: 1;
+        transition: opacity 1.5s;
 
-  &.feature-img-hidden {
-    left: 0;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 1s;
+        &.feature-info-hidden {
+          margin-top: -50px;
+          opacity: 0;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          transition: margin-top 1s, opacity 0.5s;
+        }
+
+        .feature-info-headline {
+          color: $violet;
+          font-size: 100px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        .feature-info-p {
+          color: $light-violet;
+          font-size: 30px;
+          padding-top: 10px;
+        }
+      }
+    }
   }
 }
-
-.feature-info {
-  margin-top: 0;
-  max-width: 400px;
-  opacity: 1;
-  transition: opacity 1.5s;
-
-  &.feature-info-hidden {
-    margin-top: -50px;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: margin-top 1s, opacity 0.5s;
-  }
-
-  .feature-info-headline {
-    color: $violet;
-    font-size: 100px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .feature-info-p {
-    color: $light-violet;
-    font-size: 30px;
-    padding-top: 10px;
-  }
-}
-
 
 .section--reasons {
   background: $light-violet;

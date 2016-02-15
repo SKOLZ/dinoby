@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.6",
-    "spin.js": "latest"
+    "spin.js": "latest",
+    "Scrollify": "^0.1.12"
   }
 }
