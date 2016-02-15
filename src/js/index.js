@@ -98,7 +98,7 @@
             }
             $('html, body').animate({
               scrollTop: sections[currentSection].offset().top
-            }, 1000, function () {
+            }, 500, function () {
               setTimeout(function () {
                 upScrollCalls = 0;
                 isAutoScrolling = false;
@@ -134,7 +134,7 @@
             }
             $('html, body').animate({
               scrollTop: sections[currentSection].offset().top
-            }, 1000, function () {
+            }, 500, function () {
               setTimeout(function () {
                 downScrollCalls = 0;
                 isAutoScrolling = false;
@@ -174,7 +174,7 @@
     currentSection = PREORDER_SECTION;
     $('html, body').animate({
       scrollTop: sections[currentSection].offset().top
-    }, 1000);
+    }, 500);
   });
 
   $(".nav-link").click(function(e) {
@@ -186,6 +186,6 @@
     e.preventDefault();
     $('html, body').animate({
       scrollTop: $(destination).offset().top
-    }, 1000);
+    }, 500);
   });
 })();

@@ -147,21 +147,25 @@ body {
 
 .section--header {
   background-color: $light-blue;
+  position: relative;
+  overflow: hidden;
 
   .left-info-panel {
     position: absolute;
-    bottom: 250px;
+    bottom: 200px;
     left: 660px;
   }
 
   .header-image {
     position: absolute;
-    bottom: 0;
+    bottom: -50px;
     left: 0;
+    pointer-events: none;
   }
 
   .brand-logo {
     margin-bottom: 20px;
+    max-width: 450px;
   }
 
   .header-headline {
