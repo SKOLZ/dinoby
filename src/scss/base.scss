@@ -223,12 +223,13 @@ body {
 .section--features {
   background-color: $white;
   .features-container {
-    height: 100vh;
+    // height: 100vh;
     display: block;
     margin-top: 40px;
     text-align: center;
     .feature-images {
       display: inline-block;
+      vertical-align: middle;
       .feature-image {
         opacity: 1;
         transition: opacity 1s;
@@ -243,6 +244,7 @@ body {
     }
     .feature-info-container {
       display: inline-block;
+      vertical-align: middle;
       .feature-info {
         margin-top: 0;
         max-width: 400px;
