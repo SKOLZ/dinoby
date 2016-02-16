@@ -227,6 +227,7 @@ body {
 .feature-image {
   margin-right: 80px;
   opacity: 1;
+  border-radius: 25px;
   transition: opacity 1s;
 
   &.feature-img-hidden {
