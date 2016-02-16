@@ -223,6 +223,7 @@ body {
 .section--features {
   background-color: $white;
   height: auto;
+  padding-bottom: 100px;
   .headline {
     margin-top: 30px;
   }
@@ -237,6 +238,7 @@ body {
       .feature-image {
         opacity: 1;
         transition: opacity 1s;
+        border-radius: 25px;
 
         &.feature-img-hidden {
           left: 0;
@@ -249,6 +251,7 @@ body {
     .feature-info-container {
       display: inline-block;
       vertical-align: middle;
+      text-align: left;
       .feature-info {
         margin-top: 0;
         max-width: 400px;
@@ -269,12 +272,14 @@ body {
           font-size: 100px;
           font-weight: bold;
           margin-bottom: 10px;
+          padding-left: 50px;
         }
 
         .feature-info-p {
           color: $light-violet;
           font-size: 30px;
           padding-top: 10px;
+          padding-left: 50px;
         }
       }
     }

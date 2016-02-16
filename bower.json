@@ -17,6 +17,7 @@
   "dependencies": {
     "bootstrap": "~3.3.6",
     "spin.js": "latest",
-    "scrollme": "latest"
+    "scrollme": "latest",
+    "scrollify": "latest"
   }
 }

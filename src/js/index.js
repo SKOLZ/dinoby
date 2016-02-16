@@ -1,6 +1,6 @@
 // $(document).ready(function () {
 //   $.scrollify({
-//       section : ".section",
+//       section : ".scrollify",
 //       sectionName : "section-name",
 //       easing: "easeOutExpo",
 //       scrollSpeed: 1100,
