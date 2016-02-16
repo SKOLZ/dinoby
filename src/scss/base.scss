@@ -222,6 +222,10 @@ body {
 
 .section--features {
   background-color: $white;
+  height: auto;
+  .headline {
+    margin-top: 30px;
+  }
   .features-container {
     // height: 100vh;
     display: block;
