@@ -1,18 +1,18 @@
-$(document).ready(function () {
-  $.scrollify({
-      section : ".section",
-      sectionName : "section-name",
-      easing: "easeOutExpo",
-      scrollSpeed: 1100,
-      offset : 0,
-      scrollbars: true,
-      standardScrollElements: "",
-      before:function() {},
-      after:function() {},
-      afterResize:function() {},
-      afterRender:function() {}
-  });
-});
+// $(document).ready(function () {
+//   $.scrollify({
+//       section : ".scrollify",
+//       sectionName : "section-name",
+//       easing: "easeOutExpo",
+//       scrollSpeed: 1100,
+//       offset : 0,
+//       scrollbars: true,
+//       standardScrollElements: "",
+//       before:function() {},
+//       after:function() {},
+//       afterResize:function() {},
+//       afterRender:function() {}
+//   });
+// });
 (function () {
 //
 //   var sections = [

@@ -33,91 +33,87 @@ html(lang='en')
             a.nav-link.special(href="#preorder" target="_blank")
               | PRE-ORDER
     #header.section.section--header
-      .left-info-panel
-        img.brand-logo(src='assets/logo_seccion1.png')
-        h2.header-headline
-          | Challenge kids to empower themselves and become creators and innovators.
-        h3.header-sub-headline
-          | Dinoby is a innovative game that teaches kids how to code through an interactive experience.
-        button.button.button--fill.preorder-button.js-preorder-button
-          | pre-order
-        .apps-container
-          img.app-image(src='assets/appstore_badge.png')
-          img.app-image(src='assets/googleplay_badge.png')
-      img.header-image(src='assets/tabla.png')
-    #features.section.section--features.section--common.section--top-decoration
-      h1.headline
-        | How it works
-      .features-container.section-content--common
-        .feature-images
-          img#feature1-img.feature-image(src='assets/01.png')
-        .feature-info-container
-          #feature1-info.feature-info
-            h1.feature-info-headline
-              | 01.
-            p.feature-info-p
-              | Learn the basics of coding by helping Dino on the first mission
-    .section.section--features.section--common.section--top-decoration
-      h1.headline
-        | How it works
-      .features-container.section-content--common
-        .feature-images
-          img#feature2-img.feature-image(src='assets/02.png')
-        .feature-info-container
-          #feature2-info.feature-info
-            h1.feature-info-headline
-              | 02.
-            p.feature-info-p
-              | Place the tokens in the playground to build Dino's virtual world
-    .section.section--features.section--common.section--top-decoration
-      h1.headline
-        | How it works
-      .features-container.section-content--common
-        .feature-images
-          img#feature2-img.feature-image(src='assets/03.png')
-        .feature-info-container
-          #feature3-info.feature-info
-            h1.feature-info-headline
-              | 03.
-            p.feature-info-p
-              | Use your programming skills and help Dino to reach the goal
-    .section.section--features.section--common.section--top-decoration
-      h1.headline
-        | How it works
-      .features-container.section-content--common
-        .feature-images
-          img#feature2-img.feature-image(src='assets/04.png')
-        .feature-info-container
-          #feature4-info.feature-info
-            h1.feature-info-headline
-              | 04.
-            p.feature-info-p
-              | Run your code and bring Dino to life with Augmented Reality
+      .section--content
+        .left-info-panel
+          img.brand-logo(src='assets/logo_seccion1.png')
+          h2.header-headline
+            | Challenge kids to empower themselves and become creators and innovators.
+          h3.header-sub-headline
+            | Dinoby is a innovative game that teaches kids how to code through an interactive experience.
+          button.button.button--fill.preorder-button.js-preorder-button
+            | pre-order
+          .apps-container
+            img.app-image(src='assets/appstore_badge.png')
+            img.app-image(src='assets/googleplay_badge.png')
+        img.header-image(src='assets/tabla.png')
+    #features.section.section--features.section--common
+      .section--content.scrollme.animateme(data-when='enter', data-from='1.5', data-to='0', data-opacity='0', data-translatex='400', style='opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);')
+        h1.headline
+          | How it works
+        .features-container.section-content--common
+          .feature-images
+            img#feature1-img.feature-image(src='assets/01.png')
+          .feature-info-container
+            #feature1-info.feature-info
+              h1.feature-info-headline
+                | 01.
+              p.feature-info-p
+                | Learn the basics of coding by helping Dino on the first mission
+      .section--content.scrollme.animateme(data-when='enter', data-from='1.5', data-to='0', data-opacity='0', data-translatex='400', style='opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);')
+        .features-container.section-content--common
+          .feature-images
+            img#feature2-img.feature-image(src='assets/02.png')
+          .feature-info-container
+            #feature2-info.feature-info
+              h1.feature-info-headline
+                | 02.
+              p.feature-info-p
+                | Place the tokens in the playground to build Dino's virtual world
+      .section--content.scrollme.animateme(data-when='enter', data-from='1.5', data-to='0', data-opacity='0', data-translatex='400', style='opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);')
+        .features-container.section-content--common
+          .feature-images
+            img#feature2-img.feature-image(src='assets/03.png')
+          .feature-info-container
+            #feature3-info.feature-info
+              h1.feature-info-headline
+                | 03.
+              p.feature-info-p
+                | Use your programming skills and help Dino to reach the goal
+      .section--content.scrollme.animateme(data-when='enter', data-from='1.5', data-to='0', data-opacity='0', data-translatex='400', style='opacity: 1; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale3d(1, 1, 1);')
+        .features-container.section-content--common
+          .feature-images
+            img#feature2-img.feature-image(src='assets/04.png')
+          .feature-info-container
+            #feature4-info.feature-info
+              h1.feature-info-headline
+                | 04.
+              p.feature-info-p
+                | Run your code and bring Dino to life with Augmented Reality
 
 
     #reasons.section.section--reasons.section--common
-      h1.headline
-        | Why teach your kids to code?
-      .reasons-container.section-content--common
-        .info-container
-          p.reasons-info
-            | We want to help you give your kids the tools to shape the world. Playing with Dinoby, they learn the basics of coding while having fun. Give your kids the opportunity to discover empowering software skills to make their ideas happen.
-          p.reasons-info
-            | Do you still have any doubts? Just listen to the experts:
-          button.simple-button.js-video-selector(data-target='#mark')
-            i.fa.fa-youtube-play
-            | Mark Zuckerburg teaches Repeat Loops
-          button.simple-button.js-video-selector(data-target='#obama')
-            i.fa.fa-youtube-play
-            | President Obama asks America to learn computer science
-          button.simple-button.js-video-selector(data-target='#bill')
-            i.fa.fa-youtube-play
-            | Bill Gates explains If statements
-        .videos-container
-          iframe#mark.reasons-video(width="500" height="350" src="https://www.youtube.com/embed/mgooqyWMTxk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
-          iframe#obama.reasons-video.video-hidden(width="500" height="350" src="https://www.youtube.com/embed/6XvmhE1J9PY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
-          iframe#bill.reasons-video.video-hidden(width="500" height="350" src="https://www.youtube.com/embed/m2Ux2PnJe6E?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
-
+      .section--content
+        h1.headline
+          | Why teach your kids to code?
+        .reasons-container.section-content--common
+          .info-container
+            p.reasons-info
+              | We want to help you give your kids the tools to shape the world. Playing with Dinoby, they learn the basics of coding while having fun. Give your kids the opportunity to discover empowering software skills to make their ideas happen.
+            p.reasons-info
+              | Do you still have any doubts? Just listen to the experts:
+            button.simple-button.js-video-selector(data-target='#mark')
+              i.fa.fa-youtube-play
+              | Mark Zuckerburg teaches Repeat Loops
+            button.simple-button.js-video-selector(data-target='#obama')
+              i.fa.fa-youtube-play
+              | President Obama asks America to learn computer science
+            button.simple-button.js-video-selector(data-target='#bill')
+              i.fa.fa-youtube-play
+              | Bill Gates explains If statements
+          .videos-container
+            iframe#mark.reasons-video(width="500" height="350" src="https://www.youtube.com/embed/mgooqyWMTxk?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
+            iframe#obama.reasons-video.video-hidden(width="500" height="350" src="https://www.youtube.com/embed/6XvmhE1J9PY?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
+            iframe#bill.reasons-video.video-hidden(width="500" height="350" src="https://www.youtube.com/embed/m2Ux2PnJe6E?enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen)
     #preorder.section.section--preorder.section--common.section--top-decoration
       h1.headline
         | PRE-ORDER
