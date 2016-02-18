@@ -13,7 +13,7 @@ $(document).ready(function () {
       afterRender:function() {}
   });
 });
-// (function () {
+(function () {
 //
 //   var sections = [
 //     $("#header"),
@@ -23,7 +23,7 @@ $(document).ready(function () {
 //   ]
 //
 //   const FEATURES_SECTION = 1;
-//   const PREORDER_SECTION = 3;
+  const PREORDER_SECTION = 3;
 //   const MIN_SCROLL_CALLS = 10;
 //
 //   var currentSection = 0;
@@ -174,33 +174,31 @@ $(document).ready(function () {
 //     e.stopPropagation();
 //   });
 //
-//   $('.js-video-selector').click(function () {
-//     var currentVideo = $('.reasons-video:not(.video-hidden)');
-//     currentVideo[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-//     currentVideo.addClass('video-hidden');
-//     setTimeout(function () {
-//       currentVideo[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-//     }, 2000)
-//     var target = $(this).attr('data-target');
-//     $(target).removeClass('video-hidden');
-//   });
-//
-//   $('.js-preorder-button').click(function () {
-//     currentSection = PREORDER_SECTION;
-//     $('html, body').animate({
-//       scrollTop: sections[currentSection].offset().top
-//     }, 500);
-//   });
-//
-//   $(".nav-link").click(function(e) {
-//     var destination = $(this).attr('href');
-//     var sectionIds = sections.map(function (obj) {
-//       return "#" + obj.attr('id');
-//     })
-//     currentSection = sectionIds.indexOf(destination);
-//     e.preventDefault();
-//     $('html, body').animate({
-//       scrollTop: $(destination).offset().top
-//     }, 500);
-//   });
-// })();
+  $('.js-video-selector').click(function () {
+    var currentVideo = $('.reasons-video:not(.video-hidden)');
+    currentVideo[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+    currentVideo.addClass('video-hidden');
+    setTimeout(function () {
+      currentVideo[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    }, 2000)
+    var target = $(this).attr('data-target');
+    $(target).removeClass('video-hidden');
+  });
+
+  $('.js-preorder-button').click(function () {
+    $('html, body').animate({
+      scrollTop: $("#preorder").offset().top
+    }, 500);
+  });
+
+  $(".nav-link").click(function(e) {
+    var destination = $(this).attr('href');
+    var sectionIds = sections.map(function (obj) {
+      return "#" + obj.attr('id');
+    })
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $(destination).offset().top
+    }, 500);
+  });
+})();
