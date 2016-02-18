@@ -193,9 +193,6 @@
 
   $(".nav-link").click(function(e) {
     var destination = $(this).attr('href');
-    var sectionIds = sections.map(function (obj) {
-      return "#" + obj.attr('id');
-    })
     e.preventDefault();
     $('html, body').animate({
       scrollTop: $(destination).offset().top
